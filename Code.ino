@@ -101,7 +101,7 @@ void loop()
     f4=analogRead(flexpin_4);
   }
 
-//2nd finger UP
+//1st and 2nd finger UP
   while (f1 <935 && f2<745 && f3>920 && f4 >963 ) //music play 1
   {
     Serial.println("HOW ARE YOU?");
@@ -115,7 +115,7 @@ void loop()
     f4=analogRead(flexpin_4);
   }
 
-//3rd finger UP
+//1st, 2nd and 3rd finger UP
   while (f1 <935 && f2<745 && f3<920 && f4 >963 ) //music play 3
   {
     Serial.println("I NEED HELP");
@@ -129,7 +129,7 @@ void loop()
     f4=analogRead(flexpin_4);
   }
 
-//4th finger UP
+//All 4 fingers UP
   while (f1 <935 && f2<745 && f3<920 && f4 <963 ) //music play 4
   {
     Serial.println("I NEED WATER");
@@ -163,38 +163,6 @@ void loop()
     Serial.println("BYE !!");
     lcd.print("BYE !!"); 
     music.play("6.wav");delay(4000);
-    delay(4000);
-    lcd.clear();
-    f1=analogRead(flexpin_1);
-    f2=analogRead(flexpin_2);
-    f3=analogRead(flexpin_3);
-    f4=analogRead(flexpin_4);
-  }
-
-//2nd, 3rd, and 4th fingers UP
-   while (f1 >935 && f2<745 && f3<920 && f4 <963 ) //music play 7
-  {
-    Serial.println("VINOD SIR TEACHES AMAZING!");
-    lcd.print("VINOD SIR");
-    lcd.setCursor(0, 1);
-    lcd.print("TEACHES AMAZING!");
-    music.play("7.wav");delay(4000);
-    delay(4000);
-    lcd.clear();
-    f1=analogRead(flexpin_1);
-    f2=analogRead(flexpin_2);
-    f3=analogRead(flexpin_3);
-    f4=analogRead(flexpin_4);
-  }
-
-//1st and 4th fingers UP
-   while (f1 <935 && f2>745 && f3>920 && f4 <963 ) //music play 8
-  {
-    Serial.println("SANKET SIR IS THE BEST !!!");
-    lcd.print("SANKET SIR IS");
-    lcd.setCursor(0, 1);
-    lcd.print("THE BEST !!!");
-    music.play("8.wav");delay(4000);
     delay(4000);
     lcd.clear();
     f1=analogRead(flexpin_1);
